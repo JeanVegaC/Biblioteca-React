@@ -1,0 +1,51 @@
+.modal-book{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.modal-book .icon{
+    font-size: 2rem;
+    color: var(--color-main);
+}
+
+.modal-book .data-book{
+    display: flex;
+    width: 100%;
+    gap: .5rem 1rem;
+}
+
+.modal-book .data-book .book-img{
+    width: 280px;
+}
+
+.data-book .li-data-book{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.data-book .li-data-book span:nth-of-type(odd){
+    font-weight: bolder;
+}
+
+.data-book .li-data-book span:nth-of-type(even){
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+}
+
+@media screen and (max-width:700px) {
+    .modal-book{
+        /* margin: 0 40px; */
+    }
+    .data-book{
+        flex-direction: column;
+        align-items: center;
+    }
+    .data-book .book-img{
+        max-width: 180px;
+    }
+    
+}

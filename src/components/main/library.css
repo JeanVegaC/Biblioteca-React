@@ -1,0 +1,35 @@
+.library {
+    display: flex;
+    margin-top: 50px;
+    height: 100%;
+    transition: margin-left .4s;
+}
+
+.library .ul-books{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;    
+    
+}
+
+/* EXPAND LIBRARY */
+
+.expand-library{
+    margin-left:200px;
+}
+
+@media screen and (max-width: 560px) {
+    .expand-library{
+        margin-left: 160px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .library{
+        margin-left: 0;
+    }
+}

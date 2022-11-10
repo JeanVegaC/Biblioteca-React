@@ -1,0 +1,50 @@
+/* HEADER */
+
+.header{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #3A4750;
+    color: #fff;
+}
+
+/*LEFT*/
+
+.header .left{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.header .icon{
+    margin: 0 25px 0 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .left .logo{
+    height: 30px;
+    margin-right: 5px;
+}
+.header .left img{
+    object-fit: contain;
+    display: flex;
+    filter: invert();
+}
+
+.header .left span{
+    font-family: 'Poppins';
+}
+
+/*RIGHT*/
+
+.header .right{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #303841;
+}

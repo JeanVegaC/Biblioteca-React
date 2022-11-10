@@ -1,0 +1,236 @@
+:root {
+    --color-main: #3E6D9C;
+    --color-second: #DD5353;
+}
+
+/* MAIN FORM */
+.mainForm {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0eeee;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    min-height: 600px;
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 12px 12px 16px -5px rgba(0, 0, 0, .15);
+}
+
+.form header {
+    text-align: center;
+}
+
+.form .logo {
+    width: 300px;
+}
+
+.form .logo img {
+    display: flex;
+    object-fit: contain;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 170px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mainForm .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90%;
+    height: 40px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 1.8rem;  
+    cursor: pointer;
+}
+
+.mainForm .button:nth-child(1) {
+    background-color: #3E6D9C;
+}
+
+.mainForm .button:nth-child(2) {
+    background-color: #DD5353;
+}
+
+/* STYLES SHARED SIGNIN AND LOGIN */
+
+.signin,
+.login{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    min-height: 600px;
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 12px 12px 16px -5px rgba(0, 0, 0, .15);
+}
+
+.signin header .icon,
+.login header .icon{
+    position: absolute;
+    left: 15px;
+    font-size: 1.8rem;
+}
+
+.signin .logo,
+.login .log{
+    width: 300px;
+}
+
+.signin .input,
+.login .input{
+    display: flex;
+    height: 40px;
+    gap: 1rem;
+    border-radius: 1.8rem;
+    padding: 5px 15px;
+    min-width: 90%;
+    font-size: 1rem;
+}
+
+.signin .input input,
+.login .input input{
+    width: 90%;
+    font-size: 1rem;
+    
+}
+
+.signin .input input::placeholder,
+.login .input input::placeholder{
+    font-size: 1rem;
+}
+
+.signin .input .icon,
+.login .input .icon{
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+.signin .button,
+.login .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 1.8rem;
+    background-color: #2184ca ;
+    padding: 5px 15px;
+    color: #f7eeee;
+    min-width: 90%;
+    font-size: 1rem;
+}
+
+/* SIGN IN */
+
+.signin {
+    background: #539dd1;
+    color: #fff;   
+}
+
+.signin .logo{
+    filter: invert();
+}
+
+.signin .input{
+    background-color: #2c7cb6 !important;
+    color: #f7eeee;
+}
+
+.signin .input input::placeholder{
+    color: #f7eeee;
+}
+
+.signin .input input{
+    color: #fff;
+}
+/* LOGIN */
+
+.login {
+    background: #fff;
+}
+
+.login .input{
+    background-color: #fff !important;
+    color: #000;
+    outline: 2px solid #dad1d1;
+}
+
+.login .input input::placeholder{
+    color: #d3d3d3;
+}
+
+.login .input input{
+    columns: #000;
+}
+
+/* ANIMATIONS MOVE FORM  */
+
+/* .move-form-up{
+    animation: move-form-up .4s ease-in-out;
+    
+}
+
+@keyframes move-form-up {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 1000px;
+    }
+} */
+
+@media screen and (max-width:450px) {
+    .form,
+    .login,
+    .signin{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        justify-content: space-evenly;
+    }
+
+    .form .logo,
+    .login .logo,
+    .signin .logo{
+        width: 200px;
+    }
+
+    .form .inputs .button,
+    .login .inputs .input,
+    .signin .inputs .input{
+        min-width: 80%;
+    }
+
+    .login .button,
+    .signin .button{
+        min-width: 60%;
+    }
+
+    
+}

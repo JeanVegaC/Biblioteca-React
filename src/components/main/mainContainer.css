@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --color-main: #3A4750;
+    --color-second:#2185D5;
+    --color-hover: #0077C0;
+    --color-active:#006bad;
+}
+/* MAIN */
+
+.main{
+    display: flex;
+}
+
+.section{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
