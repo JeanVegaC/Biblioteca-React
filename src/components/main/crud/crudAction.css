@@ -1,0 +1,97 @@
+.crud-action {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;    
+    
+}
+
+.crud-action .img{
+    display: flex;
+    align-self: center;
+    width: 150px;
+}
+.crud-action .img img{
+    display: flex;
+    object-fit: contain;
+}
+
+.crud-action .file input[type="file"]{
+    display: none;
+}
+
+.crud-action .file{
+    display: flex;
+    align-self: center;
+    font-family: 'Poppins';
+    color: #fff;
+    
+}
+
+.crud-action .file label{
+    padding: 5px 10px;
+    border-radius: 1rem;
+    background-color: var(--color-second);
+
+
+}
+
+
+.crud-action .file label:hover{
+    cursor: pointer;
+    background-color: var(--color-hover);
+
+}
+
+
+
+.crud-action .icon {
+    font-size: 2rem;
+    color: var(--color-main);
+}
+
+.crud-action .ul-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.crud-action .li-input {
+    position: relative;
+}
+
+.crud-action .li-input input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color-main);
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.crud-action .li-input label {
+    position: absolute;
+    left: 15px;
+    color: #a8a4a4;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.crud-action .li-input input:focus,
+input {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+    color: #000;
+}
+
+.crud-action .li-input input:focus~label,
+.crud-action .li-input input:valid~label {
+    transform: translateY(-50%) scale(0.9);
+    background-color: #fff;
+    padding: 0 .2em;
+    color: #2196f3;
+}

@@ -17,6 +17,20 @@
     width: 100%;
 }
 
+/* EXPAND SECTION */
 
+.expand-section{
+    margin-left:200px;
+}
 
+@media screen and (max-width: 560px) {
+    .expand-section{
+        margin-left: 160px;
+    } 
+}
 
+@media screen and (max-width: 370px) {
+    .show-nav ~ .section .expand-section {
+        margin-left: 0;
+    }   
+}

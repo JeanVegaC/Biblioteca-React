@@ -1,21 +1,23 @@
 import Header from './header';
 import Nav from './nav';
-import Library from './library';
+import Library from './library/library';
+import Crud from './crud/crud';
+
 import "./mainContainer.css"; //CSS
 
 export default function MainContainer({ section, setSection }) {
 
-    const returnSection = (section) => {
+    const returnSection = () => {
         switch (section) {
             case 'library':
                 return <Library></Library>
             case 'searchBook':
                 return (
-                    <h1>You are in Search Book</h1>
+                    <h1>You are in SearchBook</h1>
                 )
             case 'crud':
                 return (
-                    <h1>You are in crud</h1>
+                    <Crud></Crud>
                 )
         }
     }
@@ -28,7 +30,7 @@ export default function MainContainer({ section, setSection }) {
                     setSection={setSection}
                 />
                 <div className='section'>
-                    {returnSection(section)}
+                    {returnSection()}
                 </div>
             </main>
         </>

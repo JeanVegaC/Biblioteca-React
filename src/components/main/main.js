@@ -3,7 +3,7 @@ import MainForm from "../login/mainForm";
 
 import MainContainer from "./mainContainer";
 export default function Main() {
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(true);
     const [section, setSection] = useState("library");
 
     return (

@@ -16,20 +16,3 @@
     
 }
 
-/* EXPAND LIBRARY */
-
-.expand-library{
-    margin-left:200px;
-}
-
-@media screen and (max-width: 560px) {
-    .expand-library{
-        margin-left: 160px;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    .library{
-        margin-left: 0;
-    }
-}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getBook } from "../../services/getBook";
+import { getBook } from "../../../services/getBook";
 import { IoMdArrowBack } from 'react-icons/io';
 import "./modalBook.css"
 import Loader from "./loader";
