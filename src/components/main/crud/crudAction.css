@@ -6,6 +6,13 @@
     
 }
 
+.crud-action form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .crud-action .img{
     display: flex;
     align-self: center;
@@ -21,8 +28,8 @@
 }
 
 .crud-action .file{
-    display: flex;
-    align-self: center;
+    /* display: flex; */
+    /* align-self: center; */
     font-family: 'Poppins';
     color: #fff;
     
@@ -94,4 +101,17 @@ input {
     background-color: #fff;
     padding: 0 .2em;
     color: #2196f3;
+}
+
+.crud-action .button-send{
+    padding: 8px 14px;
+    border-radius: 1rem;
+    background-color: var(--color-second);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.crud-action .button-send:hover{
+    background-color: var(--color-hover);
 }

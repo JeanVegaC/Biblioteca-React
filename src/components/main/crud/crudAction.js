@@ -2,36 +2,46 @@ import "./crudAction.css";
 import { IoMdArrowBack } from "react-icons/io";
 import Interrogation from '../../../assets/interrogation.jpg';
 export default function CrudAction({ crudAction, setCrudAction }) {
+
+    const createBook = ()=>{
+
+    }
+
     const returnSection = () => {
         switch (crudAction) {
             case 1:
                 return (
                     <>
                         <div className="img">
-                        <img src={Interrogation}></img>
+                            <img src={Interrogation}></img>
                         </div>
-                        <div className="file">
-                            <input required={true} type="file" accept="image/*" id="file"></input>
-                            <label htmlFor="file">Select an image</label>
-                        </div>
-                        <ul className="ul-inputs">
-                            <li className="li-input">
-                                <input required={true} autoComplete="off" type='text'></input>
-                                <label>Title</label>
-                            </li>
-                            <li className="li-input">
-                                <input required={true} autoComplete="off" type='text'></input>
-                                <label>Autor</label>
-                            </li>
-                            <li className="li-input">
-                                <input required={true} autoComplete="off" type='text'></input>
-                                <label>Género</label>
-                            </li>
-                            <li className="li-input">
-                                <input required={true} autoComplete="off" type='text'></input>
-                                <label>Descripción</label>
-                            </li>
-                        </ul>
+                        <form action="https://dbbiblioteca.vercel.app/upload" method="POST" encType="multipart/form-data">
+                            <div className="file">
+                                <input required={true} type="file" name="image" accept="image/*" id="file"></input>
+                                <label htmlFor="file">Select an image</label>
+                            </div>
+                            <ul className="ul-inputs">
+                                <li className="li-input">
+                                    <input required={true} autoComplete="off" type='text'></input>
+                                    <label>Title</label>
+                                </li>
+                                <li className="li-input">
+                                    <input required={true} autoComplete="off" type='text'></input>
+                                    <label>Autor</label>
+                                </li>
+                                <li className="li-input">
+                                    <input required={true} autoComplete="off" type='text'></input>
+                                    <label>Género</label>
+                                </li>
+                                <li className="li-input">
+                                    <input required={true} autoComplete="off" type='text'></input>
+                                    <label>Descripción</label>
+                                </li>
+                                <li className="">
+                                    <button type="submit" className="button-send" onClick={()=>createBook()}>Crear</button>
+                                </li>
+                            </ul>
+                        </form>
                     </>
                 );
             case 2:
