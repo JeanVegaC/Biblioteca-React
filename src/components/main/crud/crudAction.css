@@ -32,7 +32,11 @@
     /* align-self: center; */
     font-family: 'Poppins';
     color: #fff;
-    
+    /* background:red; */
+}
+
+.crud-action .file input{
+    background-color: red;
 }
 
 .crud-action .file label{

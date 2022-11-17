@@ -1,11 +1,42 @@
 import "./crudAction.css";
 import { IoMdArrowBack } from "react-icons/io";
 import Interrogation from '../../../assets/interrogation.jpg';
+import {useState, useEffect} from 'react';
+
 export default function CrudAction({ crudAction, setCrudAction }) {
 
-    const createBook = ()=>{
+    const [image, setImage] = useState(null);
 
+
+
+    const sendHandle = ()=>{
+        if(!image){
+            return 
+        }
+        console.log(image);
+
+        const formData = new FormData();
+        formData.append("file",image);
+        const options = {
+            method:'POST',
+            body:formData
+        }
+
+        fetch('http://localhost:4000/upload',options)
+        .then(e=>e.text())
+        .then(e=>console.log(e))
+        .catch(e=>console.log('Error: '+e));
+
+        setImage(null);
+        document.getElementById('file').value = null;
+        
     }
+
+    const handleSelected = (e)=>{
+        setImage(e.target.files[0]);
+    }
+
+ 
 
     const returnSection = () => {
         switch (crudAction) {
@@ -15,9 +46,9 @@ export default function CrudAction({ crudAction, setCrudAction }) {
                         <div className="img">
                             <img src={Interrogation}></img>
                         </div>
-                        <form action="https://dbbiblioteca.vercel.app/upload" method="POST" encType="multipart/form-data">
+                        {/* <form action="https://dbbiblioteca.vercel.app/upload" method="POST" encType="multipart/form-data"> */}
                             <div className="file">
-                                <input required={true} type="file" name="image" accept="image/*" id="file"></input>
+                                <input required={true} type="file" name="image" accept="image/*" onChange={handleSelected} id="file"></input>
                                 <label htmlFor="file">Select an image</label>
                             </div>
                             <ul className="ul-inputs">
@@ -38,10 +69,10 @@ export default function CrudAction({ crudAction, setCrudAction }) {
                                     <label>Descripción</label>
                                 </li>
                                 <li className="">
-                                    <button type="submit" className="button-send" onClick={()=>createBook()}>Crear</button>
+                                    <button type="submit" className="button-send" onClick={sendHandle}>Crear</button>
                                 </li>
                             </ul>
-                        </form>
+                        {/* </form> */}
                     </>
                 );
             case 2:
