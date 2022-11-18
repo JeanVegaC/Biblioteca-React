@@ -1,3 +1,5 @@
+
+/* CREATE */
 .crud-action {
     display: flex;
     flex-direction: column;
@@ -16,27 +18,45 @@
 .crud-action .img{
     display: flex;
     align-self: center;
-    width: 150px;
+    width: 200px;
+    height: 200px;
 }
 .crud-action .img img{
     display: flex;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .crud-action .file input[type="file"]{
     display: none;
 }
 
+.crud-action .file label{
+    text-align: center;
+}
+
 .crud-action .file{
-    /* display: flex; */
-    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     font-family: 'Poppins';
     color: #fff;
+    gap: .6rem;
     /* background:red; */
 }
 
+
+.crud-action .file span{
+    text-align: center;
+    color: var(--color-main);
+}
+
 .crud-action .file input{
-    background-color: red;
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 6px 1rem;
+    font-size: 1rem;
+    color: var(--color-main);
 }
 
 .crud-action .file label{
@@ -118,4 +138,62 @@ input {
 
 .crud-action .button-send:hover{
     background-color: var(--color-hover);
+}
+
+/* READ */
+
+.crud-action .ul-books{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 0;
+    /* width:10; */
+    /* height: 100vh; */
+    /* overflow-x:scroll; */
+}
+
+.crud-action .ul-books .li-book{
+    display: grid;
+    grid-template-columns: .2fr repeat(4, 1fr);   
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    
+
+}
+
+.crud-action .ul-books .li-book div{
+    width: 100%;
+}
+
+/* .crud-action .ul-books .li-book div:nth-child(1){
+    min-width: 20px;
+}
+
+.crud-action .ul-books .li-book div:nth-child(2){
+    min-width: 200px;
+} */
+
+.crud-action .ul-books .li-book span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid #d3d3d3;
+    
+}
+
+
+
+@media screen and (max-width:780px) {
+    .crud-action .ul-books .li-book span{
+    font-size: .7rem;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .crud-action .ul-books .li-book span{
+    font-size: .4rem;
+    }
 }
