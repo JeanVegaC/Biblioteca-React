@@ -1,40 +1,40 @@
-
 /* CREATE */
 .crud-action {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    gap: 2rem;    
-    
+    gap: 2rem;
+
 }
 
-.crud-action form{
+.crud-action form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.crud-action .img{
+.crud-action .img {
     display: flex;
     align-self: center;
     width: 200px;
     height: 200px;
 }
-.crud-action .img img{
+
+.crud-action .img img {
     display: flex;
     object-fit: cover;
 }
 
-.crud-action .file input[type="file"]{
+.crud-action .file input[type="file"] {
     display: none;
 }
 
-.crud-action .file label{
+.crud-action .file label {
     text-align: center;
 }
 
-.crud-action .file{
+.crud-action .file {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -45,12 +45,12 @@
 }
 
 
-.crud-action .file span{
+.crud-action .file span {
     text-align: center;
     color: var(--color-main);
 }
 
-.crud-action .file input{
+.crud-action .file input {
     border: solid 1.5px #9e9e9e;
     border-radius: 1rem;
     background: none;
@@ -59,7 +59,7 @@
     color: var(--color-main);
 }
 
-.crud-action .file label{
+.crud-action .file label {
     padding: 5px 10px;
     border-radius: 1rem;
     background-color: var(--color-second);
@@ -68,7 +68,7 @@
 }
 
 
-.crud-action .file label:hover{
+.crud-action .file label:hover {
     cursor: pointer;
     background-color: var(--color-hover);
 
@@ -113,7 +113,7 @@
 }
 
 .crud-action .li-input input:focus,
-input {
+.crud-action .li-input input:focus input {
     outline: none;
     border: 1.5px solid #1a73e8;
     color: #000;
@@ -127,7 +127,7 @@ input {
     color: #2196f3;
 }
 
-.crud-action .button-send{
+.crud-action .button-send {
     padding: 8px 14px;
     border-radius: 1rem;
     background-color: var(--color-second);
@@ -136,64 +136,68 @@ input {
     cursor: pointer;
 }
 
-.crud-action .button-send:hover{
+.crud-action .button-send:hover {
     background-color: var(--color-hover);
 }
 
 /* READ */
 
-.crud-action .ul-books{
+.crud-action .ul-books {
     display: flex;
     flex-direction: column;
-    padding: 0 15px 0 0;
-    /* width:10; */
-    /* height: 100vh; */
-    /* overflow-x:scroll; */
 }
 
-.crud-action .ul-books .li-book{
+.crud-action .ul-books .li-book {
     display: grid;
-    grid-template-columns: .2fr repeat(4, 1fr);   
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    
-
+    grid-template-columns: .2fr .8fr .8fr .7fr 2fr;
 }
 
-.crud-action .ul-books .li-book div{
+.crud-action .ul-books .li-book div {
     width: 100%;
+    outline: 1px solid #d3d3d3;
 }
 
-/* .crud-action .ul-books .li-book div:nth-child(1){
-    min-width: 20px;
-}
-
-.crud-action .ul-books .li-book div:nth-child(2){
-    min-width: 200px;
-} */
-
-.crud-action .ul-books .li-book span{
+.crud-action .ul-books .li-book span {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
     height: 100%;
-    outline: 1px solid #d3d3d3;
-    
+
 }
 
 
-
 @media screen and (max-width:780px) {
-    .crud-action .ul-books .li-book span{
-    font-size: .7rem;
+    .crud-action .ul-books .li-book span {
+        font-size: .7rem;
     }
 }
 
 @media screen and (max-width:490px) {
-    .crud-action .ul-books .li-book span{
-    font-size: .4rem;
+    .crud-action .ul-books .li-book span {
+        font-size: .6rem;
     }
 }
+
+@media screen and (max-width:400px) {
+    .crud-action .ul-books .li-book div {
+        overflow: scroll;
+    }
+}
+
+/* PUT */
+
+.crud-action .buttons button{
+    margin: 0 5px;
+}
+
+.crud-action input:disabled {
+    background-color: #d4d4d4;
+}
+
+.crud-action input[type=number]::-webkit-inner-spin-button,
+.crud-action input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+

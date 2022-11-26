@@ -21,6 +21,11 @@
     width: 280px;
 }
 
+.modal-book .data-book .book-img img{
+display: flex;
+object-fit: cover;
+}
+
 .data-book .li-data-book{
     display: flex;
     flex-direction: column;
