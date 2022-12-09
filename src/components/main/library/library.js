@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Book from "../shared/book";
-import Loader from "../shared/loader";
-import ModalBook from "../shared/modalBook";
+import Book from "../../shared/book";
+import Loader from "../../shared/loader";
+import ModalBook from "../../shared/modalBook";
 import { getBooks } from "../../../services/getBooks";
-import "./library.css"; // CSS
+import "./library.css";
 
 export default function Library() {
     const [listBooks, setListBooks] = useState(null);
@@ -11,7 +11,6 @@ export default function Library() {
 
     useEffect(() => {
         getBooks().then(e => setListBooks(e))
-
     }, []);
 
     return (

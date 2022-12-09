@@ -47,4 +47,9 @@
     align-items: center;
     padding: 10px;
     background-color: #303841;
+    cursor: pointer;
+}
+
+.header .right:hover{
+    background-color: var(--color-hover);
 }

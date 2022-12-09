@@ -1,4 +1,3 @@
-import { GiConsoleController } from 'react-icons/gi';
 import { getBooks } from './getBooks';
 
 export const getResults = async (title) => {

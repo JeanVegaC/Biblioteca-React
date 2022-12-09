@@ -37,6 +37,16 @@ outline: 1px solid #d3d3d3;
     margin-left: 15px;
 }
 
+.nav .li-user .icon{
+    margin-left: 5px;
+    font-size: 1.4rem;
+}
+
+.nav .li-user span{
+    margin-left: 10px;
+    font-size: .9rem;
+}
+
 .nav .li-selected{
     background-color: var(--color-active);
 }

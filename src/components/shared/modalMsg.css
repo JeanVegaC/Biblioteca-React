@@ -1,0 +1,83 @@
+.modal-overlay{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000;
+    filter: opacity(.425);
+}
+
+.modal-msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+    width: 400px;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    z-index: 100;
+    background: red;
+    box-shadow: 5px 1px -5px 12px rgba(0, 0, 0, .15);
+    background: #fff;
+    
+}
+
+.modal-msg .header{
+    position:initial;
+    min-height: 40px;
+    background: #fff;
+    justify-content: end;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.modal-msg .header .icon{
+    font-size: 1.8rem;
+    color: var(--color-main);
+    margin-right: 10px;
+}
+
+.modal-msg .message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #000;
+    
+}
+
+.modal-msg .message p{
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+}
+
+.modal-msg .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+.modal-msg .button button{
+    width: 110px;
+    border: none;
+    background-color: var(--color-second);
+    border-radius: 1rem;
+    padding: 3px 10px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.modal-msg .button button:hover{
+    background-color: var(--color-hover);
+}
+    

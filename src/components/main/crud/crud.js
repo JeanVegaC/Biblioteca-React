@@ -7,10 +7,6 @@ import CrudAction from './crudAction';
 export default function Crud() {
     const [crudAction, setCrudAction] = useState(null);
 
-    useEffect(() => {
-        // crudAction && console.log(crudAction);
-    }, [crudAction]);
-
     return (
         <div className="crud expand-section">
             {crudAction && <CrudAction crudAction={crudAction} setCrudAction={setCrudAction}></CrudAction>}

@@ -1,10 +1,11 @@
 import { validateLogin } from '../../services/login';
 
-export const handleLogin = async (refInputUser,refInputPass,setIsAuth)=>{
+export const handleLogin = async (refInputUser,refInputPass,setIsAuth, setUser, setShowModalMsg)=>{
     const user = refInputUser.current.value,
     pass = refInputPass.current.value;
-    const isAuth = await validateLogin(user, pass);
-    setIsAuth(isAuth);
+    const authRes = await validateLogin(user, pass);
 
-    if(isAuth === false) console.log('error Parameters')
+    setIsAuth(authRes.auth);
+    setUser(authRes.userData);
+    if(authRes.auth === false) setShowModalMsg(true);
 }

@@ -1,5 +1,6 @@
 .modal-book{
     display: flex;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     padding: 1rem;
@@ -19,6 +20,7 @@
 
 .modal-book .data-book .book-img{
     width: 280px;
+    height: 280px;
 }
 
 .modal-book .data-book .book-img img{
@@ -39,6 +41,12 @@ object-fit: cover;
 .data-book .li-data-book span:nth-of-type(even){
     font-size: 1.1rem;
     font-family: 'Poppins';
+}
+
+/* SIMILAR BOOKS */
+
+.library .modal-book .ul-books{
+    padding-top: 0 ;
 }
 
 @media screen and (max-width:700px) {

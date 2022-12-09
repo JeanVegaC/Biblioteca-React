@@ -41,13 +41,14 @@
     object-fit: contain;
 }
 
-.inputs {
+.mainForm .inputs {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     min-height: 170px;
     width: 100%;
     flex-direction: column;
+    gap: .5rem;
 }
 
 .mainForm .button {
@@ -70,6 +71,10 @@
 
 .mainForm .button:nth-child(2) {
     background-color: #DD5353;
+}
+
+.mainForm .button:nth-child(4) {
+    background-color: #5596d6;
 }
 
 /* STYLES SHARED SIGNIN AND LOGIN */
@@ -167,6 +172,10 @@
 .signin .input input{
     color: #fff;
 }
+
+.mainForm .signin .button:nth-child(4){
+    background-color: #2184ca;
+}
 /* LOGIN */
 
 .login {
@@ -186,22 +195,6 @@
 .login .input input{
     columns: #000;
 }
-
-/* ANIMATIONS MOVE FORM  */
-
-/* .move-form-up{
-    animation: move-form-up .4s ease-in-out;
-    
-}
-
-@keyframes move-form-up {
-    0%{
-        bottom: 0;
-    }
-    100%{
-        bottom: 1000px;
-    }
-} */
 
 @media screen and (max-width:450px) {
     .form,
@@ -231,6 +224,4 @@
     .signin .button{
         min-width: 60%;
     }
-
-    
 }

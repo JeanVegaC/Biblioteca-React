@@ -4,6 +4,7 @@
     margin-top: 50px;
     height: 100%;
     transition: margin-left .4s;
+    gap: 1rem;
     /* overflow: hidden; */
 
 }
@@ -58,4 +59,25 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem 0 1rem 0;   
+}
+
+/* GENDERS */
+
+.search .ul-genders{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search .ul-genders .li-gender{
+    background-color: var(--color-main);
+    border-radius: 1rem;
+    color: #fff;
+    padding: 3px 10px;
+    cursor: pointer;   
+}
+
+.search .ul-genders .selected{
+    background-color: var(--color-second);
 }

@@ -1,35 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
+import MainFormContainer from './mainFormContainer';
 import LogInForm from './logInForm'
 import SignInForm from './signInForm'
 import '../login/login.css'
 
-import MainFormContainer from './mainFormContainer';
-
-export default function MainForm({ setIsAuth}) {
+export default function MainForm({ setUser, setIsAuth}) {
     const [formActive, setFormActive] = useState(null);
-    // const refMainForm = useRef()
-
-    // useEffect(() => {
-    //     if (formActive) {
-    //         if (formActive === 'main') refMainForm.current.classList.toggle('move-form-up');
-    //         if (formActive === 'signin' || formActive === 'login') refMainForm.current.classList.toggle('move-form-up');
-    //     }
-    // }, [formActive]);
 
     return (
         <section className='mainForm'>
             {!formActive && 
             <MainFormContainer
+            setUser={setUser}
+            setIsAuth={setIsAuth}
             setFormActive={setFormActive}
             />}
             {(formActive === 'login') ?
                 <LogInForm
                     setFormActive={setFormActive}
                     setIsAuth={setIsAuth}
+                    setUser={setUser}
                 />
                 : (formActive === 'signin') ?
                     <SignInForm
                         setFormActive={setFormActive}
+                        setIsAuth={setIsAuth}
+                        setUser={setUser}
                     />
                     : ''}
         </section>

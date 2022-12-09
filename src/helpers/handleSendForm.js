@@ -2,7 +2,7 @@ import { deleteBook } from "../services/deleteBook";
 import { postBook } from "../services/postBook";
 import { putBook } from "../services/putBook";
 
-export const handleSendForm = (method, data, id) => {
+export const handleSendForm = async (method, data, id) => {
 
     //SEND IMG - NOT WORKING
 
@@ -27,22 +27,15 @@ export const handleSendForm = (method, data, id) => {
     // document.getElementById('file').value = null;
 
     const body = data
-    let msg;
 
     switch (method) {
         case 1:
-            msg = postBook(body);
-            break;
+            return postBook(body).then(e => e);
         case 2:
-            msg = putBook(body, id);
-            break;
+            return putBook(body, id).then(e=> e);
         case 3:
-            msg = deleteBook(id);
-            break;
+            return deleteBook(id).then(e=> e);
         default:
             break;
     }
-
-    return;
-
 }

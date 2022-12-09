@@ -3,8 +3,9 @@ import { getUsers } from "./getUsers"
 export const validateLogin = async (user, pass) => {
     const users = await getUsers();
     let auth = false;
+    let userData;
     users.map(e=>{
-        if(e.user == user) if(e.password == pass) auth = true;
+        if(e.userName === user) if(e.password === pass) {auth = true; userData = e}
     })
-    return auth;
+    return {auth, userData};
 }

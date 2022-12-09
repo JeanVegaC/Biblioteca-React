@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MainForm from "../login/mainForm";
-
 import MainContainer from "./mainContainer";
+
 export default function Main() {
-    const [isAuth, setIsAuth] = useState(true);
+    const [user, setUser] = useState(null);
+    const [isAuth, setIsAuth] = useState(false);
     const [section, setSection] = useState("library");
 
     return (
@@ -12,10 +13,14 @@ export default function Main() {
                 <MainContainer
                 section={section}
                 setSection={setSection}
+                setIsAuth={setIsAuth}
+                user={user}
+                setUser={setUser}
                 />
             : 
-                <MainForm setIsAuth={setIsAuth} />
+                <MainForm isAuth={setIsAuth} setUser={setUser} setIsAuth={setIsAuth}/>
             }
         </main>
     );
 }
+
